@@ -1,9 +1,11 @@
 #!/bin/pyhton
-# Be sure to kill all processes from the commandline: killall threads.py
-# As threads can remain open in the background
-# i.e use ctr+c to stop the script
-# Or search for open threads with: ps aux | grep threads.py
-# The kill the process ids: kill -9 12345
+# Use ctr+c to stop the script as threads can remain open in the background.
+# Be sure to kill all processes from the commandline:
+#   $ killall threads.py
+# Or search for open processes with: 
+#   $ ps aux | grep threads.py
+# And kill the process ids: 
+#   $ kill -9 12345
 
 import time, threading
 
