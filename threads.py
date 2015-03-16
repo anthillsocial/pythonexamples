@@ -1,6 +1,6 @@
 #!/bin/pyhton
 # Use ctr+c to stop the script as threads can remain open in the background.
-# Be sure to kill all processes from the commandline:
+# If unsure, kill all processes from the commandline:
 #   $ killall threads.py
 # Or search for open processes with: 
 #   $ ps aux | grep threads.py
