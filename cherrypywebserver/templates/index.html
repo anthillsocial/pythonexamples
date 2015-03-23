@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<h1>Cherry Py Webserver: {{ pagevars['title'] }}</h1>
+
+<a href="/">Home</a> | <a href="/page2?agetvariable=22.2&andanothervariable=66.6">Page 2</a>
+
+<h2>Test form</h2>
+<form action="/?msg=PostedData" method="post" enctype="multipart/form-data">
+    <input type="text" name='textfield'>  
+    <input type="submit" />
+</form>
+
+<h2>GET Variables</h2>
+
+<ul>
+{% for item in pagevars['getvars'] %}
+  <li><strong>{{ item }}:</strong> {{ pagevars['getvars'][item] }}</li>
+{% endfor %}
+</ul>
+
+<h2>POST Variables</h2>
+<ul>
+{% for item in pagevars['postvars'] %}
+  <li><strong>{{ item }}:</strong> {{ pagevars['postvars'][item] }}</li>
+{% endfor %}
+</ul>
+
+<h2>EXTERNAL Variables</h2>
+<ul>
+{% for item in pagevars['extvars'] %}
+  <li><strong>{{ item }}:</strong> {{ pagevars['extvars'][item] }}</li>
+{% endfor %}
+</ul>
+
+
+</body>
+</html>
