@@ -1,4 +1,7 @@
 #!/usr/bin/python
+# Works with both python2 and pyhton3
+# Make sure jinja and cherrypy are installed for pyhton2 OR python3
+# depending on which version of pyhton you use
 import cherrypy, os, threading
 from jinja2 import Environment, FileSystemLoader
 ENV = Environment(loader=FileSystemLoader('templates'))
@@ -24,8 +27,7 @@ class CherryPyServer:
     def paths(self):
         return {
             '/': {
-                #'tools.staticdir.root': os.path.abspath(os.getcwd())
-                #'request.dispatch': cherrypy.dispatch.MethodDispatcher()
+                'tools.staticdir.root': os.path.abspath(os.getcwd())
             },
             '/public': {
                 'tools.staticdir.on': True,
